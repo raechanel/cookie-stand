@@ -15,3 +15,12 @@ header {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }
+
+table {
+  border: 1px solid black;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 10px;
+}
