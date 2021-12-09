@@ -50,13 +50,13 @@ Store.prototype.render = function () {
   table.appendChild(tr);
 };
 
-function renderHeader (){
+function renderHeader() {
   let tr = document.createElement('tr');
   let th = document.createElement('th');
   tr.appendChild(th);
   for (let i = 0; i < hours.length; i++) {
     let th = document.createElement('th');
-    th.textContent = hours [i];
+    th.textContent = hours[i];
     tr.appendChild(th);
   }
   th = document.createElement('th');
@@ -67,12 +67,12 @@ function renderHeader (){
 
 
 let seattle = new Store('Seattle', 23, 65, 6.3, []);
-let tokyo = new Store ('Tokyo', 3, 24, 1.2, []);
-let dubai =new Store ('Dubai', 11, 38, 3.7, []);
-let paris = new Store ('Paris', 20, 38, 2.3, []);
-let lima = new Store ('Lima', 2, 16, 4.6, []);
+let tokyo = new Store('Tokyo', 3, 24, 1.2, []);
+let dubai = new Store('Dubai', 11, 38, 3.7, []);
+let paris = new Store('Paris', 20, 38, 2.3, []);
+let lima = new Store('Lima', 2, 16, 4.6, []);
 
-renderHeader ();
+renderHeader();
 seattle.getRandomCookies();
 seattle.calcCookiesEachHour();
 seattle.render();
@@ -98,5 +98,23 @@ function getRandomCust(min, max) {
 }
 
 
+// Add new shop
+const storeForm = document.getElementById('add-store');
 
 
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let storelocation = event.target.storelocation.value;
+  let min = event.target.min.value;
+  let max = event.target.min.value;
+  let avg = event.taget.avg.value;
+
+
+  const newStore = new Store(storelocation, min, max, avg);
+
+  newStore.render();
+  storeForm.reset ();
+}
+
+storeForm.addEventListener('submit', handleSubmit);

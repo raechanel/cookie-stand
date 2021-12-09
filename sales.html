@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Salmon Cookies Sales</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <h1>Salmon Cookie Sales</h1>
     <a href="index.html">Home</a>
   </header>
   <main>
-    <table id="cookiedata">
-    </table>
+    <div>
+      <form id="add-store">
+        <fieldset>
+
+          <legend>Add New Store Information</legend>
+
+          <label for="storelocation">Store Location: </label>
+          <input id="text" name="storelocation">
+
+          <label for="min">Minimum Custumers Per Hour: </label>
+          <input id="number" name="min">
+
+          <label for="max">Maximum Customers Per Hour: </label>
+          <input id="number" name="max">
+
+          <label for="avg">Average Cookies Sold each Hour: </label>
+          <input id="number" name="avg">
+
+          <button>Add New Store</button>
+        </fieldset>
+      </form>
+    </div>
+
+    <table id="cookiedata"></table>
+    
   </main>
   <script src="js/app.js"></script>
 </body>
-</html>
 
+</html>
