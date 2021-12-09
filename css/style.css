@@ -116,11 +116,19 @@ li {
   margin-right: auto;
 }
 
-#gift-shop {
-  display: inline;
-  margin: auto;
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
 }
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Sales Page CSS */
 #cookiedata {
   margin: 150px 50px 150px 50px;
 }
