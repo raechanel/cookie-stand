@@ -1,5 +1,5 @@
-* {
-  background-color:bisque;
+body {
+  background-color: gray;
 }
 
 h3 {
@@ -8,12 +8,15 @@ h3 {
 
 ul {
   font-family: Georgia, 'Times New Roman', Times, serif;
-
+  background-color: skyblue;
 }
 
 header {
   font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
+  background-color: skyblue;
+  border: 1px solid skyblue;
+  height: auto;
 }
 
 table {
@@ -23,4 +26,101 @@ table {
 td, th {
   border: 1px solid black;
   padding: 10px;
+}
+h1 {
+  background-color:skyblue;
+  color: black;
+}
+
+#nav li {
+  display: inline;
+  border: solid skyblue 1px;
+  padding: 10px;
+  margin: 20px;
+  background-color: skyblue;
+  color: solid black;
+  font-weight: bolder;
+  text-decoration: none;
+
+}
+
+#nav li:hover {
+  transition: all ease 2s;
+  background-color:salmon;
+}
+
+h2 {
+  text-align: center;
+}
+
+#fish-decal {
+  height: 200px;
+  width: 200px
+}
+
+#shirt {
+  height: 200px;
+  width: 200px;
+}
+
+#cookies {
+ height: 200px;
+ width: 200px;
+}
+
+#cutter {
+  height: 200px;
+  width: 200px;
+}
+
+#gift-shop {
+  background-color: grey;
+}
+
+li {
+  text-decoration: none;
+}
+
+#seattle {
+  float: inline-start;
+  display: inline-block;
+  margin: 20px;
+}
+
+#tokyo {
+  display: inline-block;
+  float: inline-end;
+  margin: 20px;
+}
+
+#dubai {
+  display: inline-block;
+  float:inline-end;
+  margin: 20px;
+}
+
+#paris {
+  display: inline-block;
+  float: inline-end;
+  margin: 20px;
+}
+
+#lima {
+  display: inline-block;
+  float: inline-end;
+  margin: 20px;
+}
+
+#locations {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gift-shop {
+  display: inline;
+  margin: auto;
+}
+
+#cookiedata {
+  margin: 150px 50px 150px 50px;
 }
