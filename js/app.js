@@ -66,6 +66,15 @@ function renderHeader() {
 }
 
 
+// function renderFooter(){
+//   let tfoot = document.createElement('tfoot');
+//   let tf = document.createElement('tr');
+
+//   buildElement('td', 'Total', tr);
+//   for (let i = 0);
+// }
+
+
 let seattle = new Store('Seattle', 23, 65, 6.3, []);
 let tokyo = new Store('Tokyo', 3, 24, 1.2, []);
 let dubai = new Store('Dubai', 11, 38, 3.7, []);
@@ -73,6 +82,7 @@ let paris = new Store('Paris', 20, 38, 2.3, []);
 let lima = new Store('Lima', 2, 16, 4.6, []);
 
 renderHeader();
+// renderFooter();
 seattle.getRandomCookies();
 seattle.calcCookiesEachHour();
 seattle.render();
@@ -106,13 +116,14 @@ function handleSubmit(event) {
   event.preventDefault();
 
   let storelocation = event.target.storelocation.value;
-  let min = event.target.min.value;
-  let max = event.target.min.value;
-  let avg = event.taget.avg.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
 
 
   const newStore = new Store(storelocation, min, max, avg);
 
+  newStore.calcCookiesEachHour();
   newStore.render();
   storeForm.reset ();
 }
